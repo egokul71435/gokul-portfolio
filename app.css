@@ -180,6 +180,7 @@ main section {
 }
 
 main section h2 {
+    
     color: #000000;
     font-size: 48px;
     font-weight: 900;
@@ -216,6 +217,7 @@ main section.home {
 }
 
 main section.home .avatar {
+    padding-left: 20px;
     width: 50%;
     margin-right: 74px;
     transform: rotate(-2.25deg);
@@ -280,12 +282,21 @@ main section.about p:last-of-type {
 
 /** Portfolio **/
 
+main  section h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main section.photography {
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     justify-content: center;
 }
 
 main section.photography .photos {
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: auto auto;
     max-width: 75%;
@@ -363,4 +374,59 @@ main section.contact button:hover {
     100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     } 
+}
+
+@media (max-width: 1200px){
+    .wrapper {
+        flex-direction: column;
+    }
+    nav {
+        max-width: none;
+        height: auto;
+        padding: 32px;
+
+    }
+    nav h1 {
+        margin-bottom: 16px;
+    }
+    nav ul {
+        display: flex;
+        margin-bottom: 0;
+    }
+    nav ul li {
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+    nav ul li:last-of-type {
+        margin-right: 0;
+    }
+    nav p, nav > a {
+        display: none;
+    }
+    main section {
+        padding: 32px;
+    }
+    main section.home {
+        flex-direction: column;
+    }
+    main section.home .avatar {
+        margin-right: 0;
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: center;
+    }
+    main section.home .content ul {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px){
+    main section.portfolio .photos {
+        display: inline-grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        
+    }
 }
